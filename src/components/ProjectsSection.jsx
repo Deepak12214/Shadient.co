@@ -50,7 +50,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Grid Layout */}
-        <div className="lg:w-[70%] grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="lg:w-[70%] grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-min">
           {projects.map((project, idx) => (
             <ProjectCard
               key={idx}

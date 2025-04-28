@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -51,10 +52,12 @@ const Footer = () => {
 
         {/* Right Logo & Email */}
         <div className="flex flex-col gap-4">
+          <Link to="/" className="cursor-pointer">
           <div className="flex items-center gap-2">
-            <img src="/gradient-logo.svg" alt="Logo" className="w-[36px] h-[36px]" />
-            <h2 className="text-lg font-semibold">Shadient.co</h2>
+            <img src="/gradient-logo.svg" alt="Logo" className="w-[38px] h-[42px]" />
+            <span className="text-white font-semibold text-base">Shadient.co</span>
           </div>
+        </Link>
 
           <p className="text-sm text-[#A1AEBF]">Get latest updates</p>
           <input

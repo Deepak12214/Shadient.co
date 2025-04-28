@@ -9,7 +9,7 @@ import DiscussIdeaSection from '../DiscussIdeaSection';
     const Home = () => {
     return (
         <div>
-            <div className='w-full xl:w-5/12 mx-auto'>
+            <div className='w-full xl:w-5/12 mx-auto overflow-hidden'>
                 <HeroSection
             title={`Attract NewLeads like never before`}
             gradientWords={['NewLeads']}

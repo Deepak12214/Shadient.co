@@ -21,7 +21,7 @@ const HeroSection = ({
           <p className="text-[#FFA800] text-sm font-semibold mb-4">{subtitle}</p>
         )}
 
-<h1 className="text-[80px] leading-[66px] font-bold font-sans whitespace-pre-line mb-4">
+<h1 className="text-[55px] md:text-[80px] leading-[66px] font-bold font-sans whitespace-pre-line mb-4">
   {title.split(' ').map((word, idx) =>
     gradientWords.includes(word) ? (
       <span

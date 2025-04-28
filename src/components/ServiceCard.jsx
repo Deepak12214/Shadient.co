@@ -6,7 +6,7 @@ const ServiceCard = ({ logoUrl, title, text, className = '' }) => {
       className={`
         border border-[#A1AEBF] rounded-[8px] 
         bg-[#0D0D0D] text-white 
-        p-6 w-[320px]
+        p-6 w-[345px]
         ${className}
       `}
     >

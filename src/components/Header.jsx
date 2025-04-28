@@ -42,29 +42,38 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-         <motion.div
-         initial={{ opacity: 0, y: -20 }}
-         animate={{ opacity: 1, y: 0 }}
-         exit={{ opacity: 0, y: -20 }}
-         transition={{ duration: 0.3, type: 'spring' }}
-         className="md:hidden fixed top-[80px] left-0 w-full backdrop-blur-md bg-[#0D0D0D]/80 z-40 px-6 py-6 text-white"
-       >
-         <nav className="flex flex-col gap-4 text-sm font-medium">
-           <button className="flex items-center gap-2 cursor-pointer">
-             Company
-             <img src="/dropDownArrow.svg" alt="arrow" className="w-[8.78px] h-[5.2px]" />
-           </button>
-           <Link to="/service" className="cursor-pointer">Services</Link>
-           <Link to="/about-us" className="cursor-pointer">About Us</Link>
-           <Button label="CONTACT" className="mt-2 w-fit" />
-         </nav>
-       </motion.div>
-       
-        )}
-      </AnimatePresence>
+{/* Mobile Dropdown */}
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3, type: 'spring' }}
+      className="md:hidden fixed top-[80px] left-0 w-full backdrop-blur-md bg-[#0D0D0D]/80 z-40 px-6 py-6 text-white"
+    >
+      <nav className="flex flex-col gap-4 text-sm font-medium">
+        <button className="flex items-center gap-2 cursor-pointer">
+          Company
+          <img src="/dropDownArrow.svg" alt="arrow" className="w-[8.78px] h-[5.2px]" />
+        </button>
+
+        {/* Clicking Services closes menu */}
+        <Link to="/service" className="cursor-pointer" onClick={() => setIsOpen(false)}>
+          Services
+        </Link>
+
+        {/* Clicking About Us closes menu */}
+        <Link to="/about-us" className="cursor-pointer" onClick={() => setIsOpen(false)}>
+          About Us
+        </Link>
+
+        <Button label="CONTACT" className="mt-2 w-fit" />
+      </nav>
+    </motion.div>
+  )}
+</AnimatePresence>
+
     </header>
   );
 };

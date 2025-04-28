@@ -66,12 +66,12 @@ const ServicesContent = () => {
       </div>
       <div className="space-y-4 ">
         <h2 className="text-2xl font-bold pb-4">Other Services</h2>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-wrap gap-6">
         {services.map((service, idx) => (
           <ServiceCard
             key={idx}
             title={service.title}
-            iconUrl={service.iconUrl} //Not using Just demo
+            iconUrl={service.iconUrl} 
             text={service.description}
           />
         ))}
